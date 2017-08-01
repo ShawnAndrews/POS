@@ -18,6 +18,18 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetMenu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/POSServiceNS" minOccurs="0" name="GetMenuResult" nillable="true" type="q2:ArrayOfPOSSQLMenuItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="NotifyNumOrders">
     <xs:complexType>
       <xs:sequence>

@@ -111,6 +111,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Service References\POSServiceReference\POS.POSServiceReference.POSSQLMenuItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\POSServiceReference\POSService.wsdl" />
     <None Include="Service References\POSServiceReference\POSService.xsd">
       <SubType>Designer</SubType>

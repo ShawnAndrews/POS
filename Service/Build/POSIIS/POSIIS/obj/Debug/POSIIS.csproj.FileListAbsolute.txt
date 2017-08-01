@@ -1,6 +1,6 @@
 c:\users\shawndesktop\documents\visual studio 2015\Projects\POSIIS\POSIIS\bin\Debug\POSIIS.dll.config
 c:\users\shawndesktop\documents\visual studio 2015\Projects\POSIIS\POSIIS\bin\Debug\POSIIS.dll
 c:\users\shawndesktop\documents\visual studio 2015\Projects\POSIIS\POSIIS\bin\Debug\POSIIS.pdb
-c:\users\shawndesktop\documents\visual studio 2015\Projects\POSIIS\POSIIS\obj\Debug\POSIIS.csprojResolveAssemblyReference.cache
 c:\users\shawndesktop\documents\visual studio 2015\Projects\POSIIS\POSIIS\obj\Debug\POSIIS.dll
 c:\users\shawndesktop\documents\visual studio 2015\Projects\POSIIS\POSIIS\obj\Debug\POSIIS.pdb
+C:\Users\ShawnDesktop\documents\visual studio 2015\Projects\POSIIS\POSIIS\obj\Debug\POSIIS.csprojResolveAssemblyReference.cache

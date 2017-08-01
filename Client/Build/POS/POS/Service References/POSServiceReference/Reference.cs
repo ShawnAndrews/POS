@@ -200,6 +200,99 @@ namespace POS.POSServiceReference {
         Deserts = 3,
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="POSSQLMenuItem", Namespace="http://schemas.datacontract.org/2004/07/POSServiceNS")]
+    [System.SerializableAttribute()]
+    public partial class POSSQLMenuItem : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ListIndexField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductTypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ListIndex {
+            get {
+                return this.ListIndexField;
+            }
+            set {
+                if ((this.ListIndexField.Equals(value) != true)) {
+                    this.ListIndexField = value;
+                    this.RaisePropertyChanged("ListIndex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PriceField, value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Product {
+            get {
+                return this.ProductField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
+                    this.ProductField = value;
+                    this.RaisePropertyChanged("Product");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductType {
+            get {
+                return this.ProductTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductTypeField, value) != true)) {
+                    this.ProductTypeField = value;
+                    this.RaisePropertyChanged("ProductType");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="POSServiceReference.IPOSService", CallbackContract=typeof(POS.POSServiceReference.IPOSServiceCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface IPOSService {
@@ -221,6 +314,12 @@ namespace POS.POSServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IPOSService/Leave")]
         System.Threading.Tasks.Task LeaveAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPOSService/GetMenu", ReplyAction="http://tempuri.org/IPOSService/GetMenuResponse")]
+        POS.POSServiceReference.POSSQLMenuItem[] GetMenu();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPOSService/GetMenu", ReplyAction="http://tempuri.org/IPOSService/GetMenuResponse")]
+        System.Threading.Tasks.Task<POS.POSServiceReference.POSSQLMenuItem[]> GetMenuAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -280,6 +379,14 @@ namespace POS.POSServiceReference {
         
         public System.Threading.Tasks.Task LeaveAsync() {
             return base.Channel.LeaveAsync();
+        }
+        
+        public POS.POSServiceReference.POSSQLMenuItem[] GetMenu() {
+            return base.Channel.GetMenu();
+        }
+        
+        public System.Threading.Tasks.Task<POS.POSServiceReference.POSSQLMenuItem[]> GetMenuAsync() {
+            return base.Channel.GetMenuAsync();
         }
     }
 }

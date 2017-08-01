@@ -10,6 +10,16 @@ using System.Threading.Tasks;
 namespace POSServiceNS
 {
 
+    [ServiceContract]
+    public interface IPOSServiceAPI
+    {
+        [OperationContract]
+        string GetMenu();
+
+        [OperationContract]
+        string GetAllOrders();
+    }
+
     [ServiceContract(CallbackContract = typeof(IPOSServiceCallback), SessionMode = SessionMode.Required)]
     public interface IPOSService
     {
@@ -21,6 +31,9 @@ namespace POSServiceNS
 
         [OperationContract(IsOneWay = true)]
         void Leave();
+
+        [OperationContract]
+        List<POSSQLMenuItem> GetMenu();
 
     }
 
@@ -58,6 +71,51 @@ namespace POSServiceNS
 
         [DataMember]
         public POSMenuItemEnum ProductType { get; set; }
+
+    }
+
+    [DataContract]
+    public class POSSQLOrder
+    {
+
+        [DataMember]
+        public string Prices { get; set; }
+
+        [DataMember]
+        public string Products { get; set; }
+
+        [DataMember]
+        public string ProductTypes { get; set; }
+
+        [DataMember]
+        public string Quantities { get; set; }
+
+        [DataMember]
+        public float Subtotal { get; set; }
+
+        [DataMember]
+        public float Total { get; set; }
+
+        [DataMember]
+        public DateTime Date { get; set; }
+
+    }
+
+    [DataContract]
+    public class POSSQLMenuItem
+    {
+
+        [DataMember]
+        public int ListIndex { get; set; }
+
+        [DataMember]
+        public string Product { get; set; }
+
+        [DataMember]
+        public string Price { get; set; }
+
+        [DataMember]
+        public string ProductType { get; set; }
 
     }
 

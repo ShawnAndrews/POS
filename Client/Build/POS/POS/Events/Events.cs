@@ -26,6 +26,12 @@ namespace POS
 
     }
 
+    /* Event for requesting menu */
+    public class RequestMenuEvent : PubSubEvent<List<POSSQLMenuItem>>
+    {
+
+    }
+
     /* Event for client disconnection */
     public class ClientDisconnectionEvent : PubSubEvent<int>
     {

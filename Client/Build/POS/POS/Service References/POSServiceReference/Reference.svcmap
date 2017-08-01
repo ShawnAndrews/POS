@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a9306518-c959-4643-b755-cd5a3d39b768" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6f9bfabf-1ae0-43c4-867c-7f25fe6554d0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost/POSServiceApp/POSService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="POSService.xsd" MetadataType="Schema" ID="2bc46d46-1ff2-443a-9a03-df4c791e2db6" SourceId="1" SourceUrl="http://shawndesktop-pc/POSServiceApp/POSService.svc?xsd=xsd0" />
-    <MetadataFile FileName="POSService1.xsd" MetadataType="Schema" ID="628202ce-226b-44db-9531-ce0547e087ff" SourceId="1" SourceUrl="http://shawndesktop-pc/POSServiceApp/POSService.svc?xsd=xsd2" />
-    <MetadataFile FileName="POSService2.xsd" MetadataType="Schema" ID="f022e299-a7de-489a-adf2-4a376458bc0a" SourceId="1" SourceUrl="http://shawndesktop-pc/POSServiceApp/POSService.svc?xsd=xsd1" />
-    <MetadataFile FileName="POSService.wsdl" MetadataType="Wsdl" ID="99ce35db-2bb5-443d-bb82-88e5fd3814a0" SourceId="1" SourceUrl="http://localhost/POSServiceApp/POSService.svc?wsdl" />
+    <MetadataFile FileName="POSService.xsd" MetadataType="Schema" ID="b375336c-d316-4dbf-923e-674ad587dfda" SourceId="1" SourceUrl="http://shawndesktop-pc/POSServiceApp/POSService.svc?xsd=xsd0" />
+    <MetadataFile FileName="POSService1.xsd" MetadataType="Schema" ID="57417e37-93b7-445f-831e-5fb4ecc4368d" SourceId="1" SourceUrl="http://shawndesktop-pc/POSServiceApp/POSService.svc?xsd=xsd2" />
+    <MetadataFile FileName="POSService2.xsd" MetadataType="Schema" ID="46b8163a-d3f0-4c81-858c-b6a1d7c6f7f7" SourceId="1" SourceUrl="http://shawndesktop-pc/POSServiceApp/POSService.svc?xsd=xsd1" />
+    <MetadataFile FileName="POSService.wsdl" MetadataType="Wsdl" ID="f3de60fd-bb29-4032-be42-f7f00229b8a1" SourceId="1" SourceUrl="http://localhost/POSServiceApp/POSService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

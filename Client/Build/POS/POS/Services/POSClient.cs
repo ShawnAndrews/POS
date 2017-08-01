@@ -29,6 +29,10 @@ namespace POS.Services
             {
                 // join client list on service
                 proxy.Join();
+
+                // publish menu received from service
+                eventAggregator.GetEvent<RequestMenuEvent>().Publish(new List<POSSQLMenuItem>(proxy.GetMenu()));
+
             }
             catch (EndpointNotFoundException ex)
             {

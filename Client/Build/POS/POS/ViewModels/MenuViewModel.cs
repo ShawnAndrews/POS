@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using POS.POSServiceReference;
+using Prism.Commands;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -31,9 +32,6 @@ namespace POS
             // set prism's event aggregator
             this.eventAggregator = eventAggregator;
 
-            // create menu model
-            menuModel = new MenuModel();
-
             // set ICommands
             mouseMoveMenuICommand = new DelegateCommand<Object>(MouseMoveMenuExecute);
             addMenuItemICommand = new DelegateCommand<Object>(DelegateAddMenuItemExecute);
@@ -42,12 +40,27 @@ namespace POS
             menuListsSelectedItem = new ObservableCollection<MenuItem>();
             for (int i = 0; i < POSConstants.NUM_MENU_ITEMS_TYPES; i++)
                 menuListsSelectedItem.Add(null);
+
+            // listen for client disconnection
+            eventAggregator.GetEvent<RequestMenuEvent>().Subscribe(GetMenuFromService);
+
         }
 
         /* Menu model property delegates */
         public ObservableCollection<MenuItem>[] menuItemsLists
         {
             get { return menuModel.menuItemsLists; }
+        }
+
+        /* Get the menuitems */
+        private void GetMenuFromService(List<POSSQLMenuItem> menu)
+        {
+            // create menu model
+            menuModel = new MenuModel();
+
+            // fill model
+            foreach (POSSQLMenuItem menuItem in menu)
+                menuModel.addMenuItem(menuItem.ListIndex, menuItem.Product, menuItem.Price, menuItem.ProductType);
         }
 
         /* On menu mouse movement, track mouse delta position to scroll order panel vertically */

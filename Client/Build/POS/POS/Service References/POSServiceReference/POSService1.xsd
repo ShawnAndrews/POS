@@ -32,4 +32,19 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="POSMenuItemEnum" nillable="true" type="tns:POSMenuItemEnum" />
+  <xs:complexType name="ArrayOfPOSSQLMenuItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="POSSQLMenuItem" nillable="true" type="tns:POSSQLMenuItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPOSSQLMenuItem" nillable="true" type="tns:ArrayOfPOSSQLMenuItem" />
+  <xs:complexType name="POSSQLMenuItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="POSSQLMenuItem" nillable="true" type="tns:POSSQLMenuItem" />
 </xs:schema>
